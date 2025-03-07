@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "type": "like",
+    "user": "Santiago",
+    "time": "1 minuto",
+    "price": 0,
+    "unread": true
+  },
+  {
+    "id": 2,
+    "type": "follow",
+    "user": "Santiago",
+    "time": "15 minutos",
+    "price": 0,
+    "unread": true
+  },
+  {
+    "id": 3,
+    "type": "admin",
+    "user": "",
+    "time": "1 hora",
+    "price": 0,
+    "unread": false
+  },
+  {
+    "id": 4,
+    "type": "sell",
+    "user": "Santiago",
+    "time": "3 horas",
+    "price": 5000,
+    "unread": true
+  },
+  {
+    "id": 5,
+    "type": "donation",
+    "user": "Santiago",
+    "time": "1 semana",
+    "price": 41312,
+    "unread": false
+  }
+]

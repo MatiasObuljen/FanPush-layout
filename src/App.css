@@ -1,4 +1,105 @@
 #root {
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+  min-width: 320px;
+  min-height: 100dvh;
+}
+
+button {
+  text-transform: initial !important;
+  min-width: 0 !important;
+  line-height: 0.75 !important;
+  white-space: nowrap !important;
+}
+
+button:hover {
+  color: #000;
+  background-color: #cccccc33;
+}
+
+.MuiButton-root:hover {
+  color: #000;
+
+  .svgStrokeIcon {
+    stroke: #000;
+  }
+  .svgFillIcon {
+    fill: #000;
+    stroke: #000;
+    stroke-width: 6px;
+  }
+}
+
+.MuiAppBar-root {
+  position: sticky !important;
+  flex-direction: row !important;
+  box-shadow: none !important;
+  min-height: 3.25rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.5rem !important;
+}
+
+.MuiTabs-root {
+  flex: 1 1 auto;
+  overflow: visible !important;
+}
+
+.MuiButtonBase-root {
+  opacity: 100% !important;
+}
+
+.MuiTabs-root,
+.MuiButtonBase-root {
+  min-height: fit-content !important;
+}
+
+.MuiTabs-scroller {
+  overflow: visible !important;
+}
+
+.MuiTab-root {
+  overflow: visible !important;
+  max-width: none !important;
+}
+
+.MuiTabs-scroller {
+  width: unset !important;
+}
+
+.MuiTabs-indicator {
+  display: none;
+}
+
+.MuiTabs-list {
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+
+@media (max-width: 470px) {
+  .MuiTabs-list {
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+  }
+}
+
+.MuiTabPanel-root {
+  padding: 0px !important;
+  flex: 1 1 auto;
+}
+
+.MuiMenu-list {
+  padding: 0px !important;
+}
+
+.MuiMenu-paper {
+  border-radius: 5px !important;
+  box-shadow: 0px 4px 6px 0px #0000001c !important;
+}
+.MuiMenuItem-root:hover {
+  background-color: #ffffff !important;
 }
