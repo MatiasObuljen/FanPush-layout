@@ -20,7 +20,7 @@ export default function NavBar() {
         bottom: 0,
         bgcolor: "white",
         flexWrap: "nowrap",
-        maxWidth: "100dvw",
+        width: "100dvw",
         zIndex: 4,
       }}
     >

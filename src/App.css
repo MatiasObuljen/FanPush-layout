@@ -90,6 +90,7 @@ button:hover {
 .MuiTabPanel-root {
   padding: 0px !important;
   flex: 1 1 auto;
+  margin-block-start: -1px;
 }
 
 .MuiMenu-list {

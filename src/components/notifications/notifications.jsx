@@ -13,7 +13,7 @@ const notificationTabs = [
   { id: "6", text: "Donaciones" },
 ];
 
-export default function Notifications({ data, allReaded }) {
+export default function Notifications({ data, allReaded, top }) {
   const notifications = data;
 
   const notificationsMap = (t) => {
@@ -28,10 +28,31 @@ export default function Notifications({ data, allReaded }) {
   const [value, setValue] = useState("1");
   const handleChange = (e, newValue) => setValue(newValue);
 
+  const topOffset = () => {
+    let offset;
+    switch (top) {
+      case 143:
+        offset = 200;
+        break;
+      case 97:
+        offset = 154;
+        break;
+      case 57:
+        offset = 113;
+        break;
+      default:
+        113;
+        break;
+    }
+    return offset;
+  };
+
   return (
     <TabContext value={value}>
       <AppBar
         sx={{
+          position: "sticky",
+          top: `${topOffset()}px`,
           bgcolor: "white",
           borderBlockEnd: "1px solid #ddd",
           zIndex: 1,

@@ -15,7 +15,7 @@ export default function StyledCategoryTab({ handleChange }) {
           label={category.text}
           value={category.id}
           p={1.6}
-          width={innerWidth > 480 ? "50%" : "100%"}
+          width={innerWidth >= 470 ? "50%" : "100%"}
           b_radius={"5px"}
           hovercolor={"#000"}
           selectedboxshadow={"0px 0.1rem 0px 0px #1f8069"}

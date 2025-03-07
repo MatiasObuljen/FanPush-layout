@@ -4,10 +4,20 @@ import CategoryTabs from "./categoryTabs";
 import StytledButton from "../styled/styledButton";
 import DoubleCheck from "../../assets/dobleCheck";
 import Notifications from "../notifications/notifications";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../context/context";
 
 export default function Categories() {
+  const [height, setHeight] = useState(57);
+
+  useEffect(() => {
+    const handleResize = () =>
+      setHeight(document.getElementById("CategoriesAppBar").offsetHeight);
+    addEventListener("resize", handleResize);
+    console.log(height);
+    return () => removeEventListener("resize", handleResize);
+  }, [height]);
+
   const [value, setValue] = useState("1");
   const handleChange = (e, newValue) => setValue(newValue);
 
@@ -32,6 +42,7 @@ export default function Categories() {
   return (
     <TabContext value={value}>
       <AppBar
+        id="CategoriesAppBar"
         position="sticky"
         sx={{
           top: "3.5rem",
@@ -59,7 +70,7 @@ export default function Categories() {
         )}
       </AppBar>
       <TabPanel value="1">
-        <Notifications data={data} allReaded={buttonHidden} />
+        <Notifications data={data} allReaded={buttonHidden} top={height} />
       </TabPanel>
       <TabPanel
         value="2"
