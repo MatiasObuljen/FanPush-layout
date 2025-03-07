@@ -14,7 +14,6 @@ export default function Categories() {
     const handleResize = () =>
       setHeight(document.getElementById("CategoriesAppBar").offsetHeight);
     addEventListener("resize", handleResize);
-    console.log(height);
     return () => removeEventListener("resize", handleResize);
   }, [height]);
 
